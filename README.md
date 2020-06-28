@@ -4,13 +4,7 @@ The purpose of this project is to collect measurement data from the Samsung Gala
 smartphone, clean it, then produce a tidy data set for the mean measurement values
 based on the subject and the type of activity performed.
 
-The data was collected by SmartLabs. More information on the original data collection
-can be found here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-The run_analysis R script generates two data sets (refere to the codebook for details):
-1. activity_data - tidy data set of wearable device measurements
-2. activity_mean - tidy data set for the mean measurements grouped by subject and the activity
-
+More details on the data and the process can be found in the project codebook.
 ## Prerequisites ##
 Before you begin, ensure you have met the following requirements:
 - You have installed the latest version of R
