@@ -12,9 +12,12 @@ library(plyr)
 library(stringr)
 
 ## download files and read in data
+<<<<<<< HEAD
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileURL, "HAR Data.zip", method="curl")
 unzip("HAR Data.zip")
+=======
+>>>>>>> 6c80b5085dc450877cdeda7a61a5deef75234b41
 
 ## load the features then rename columns to meaningful labels
 features_data <- read.table("UCI HAR Dataset\\features.txt", header=F, col.names=c("id","feature"))
@@ -81,7 +84,11 @@ mtrain <- join_all(df_trainlist)
 activity_data <- rbind(mtest, mtrain) %>%
         join(activity_labels, by="activityID") %>%
         arrange(subjectID, activity_desc) %>%
+<<<<<<< HEAD
         select(subjectID, activity_desc,(contains("std")|contains("mean"))& !contains("meanFreq")) 
+=======
+        select(subjectID, activity_desc,(contains("std")|contains("mean"))) 
+>>>>>>> 6c80b5085dc450877cdeda7a61a5deef75234b41
 
 ## create tidy data set with the average of each variable for each activity and each subject
 activity_mean <- activity_data %>%
