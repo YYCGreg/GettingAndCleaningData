@@ -81,6 +81,7 @@ mtrain <- join_all(df_trainlist)
 activity_data <- rbind(mtest, mtrain) %>%
         join(activity_labels, by="activityID") %>%
         arrange(subjectID, activity_desc) %>%
+        select(subjectID, activity_desc,(contains("std")|contains("mean"))& !contains("meanFreq"))
 
 ## create tidy data set with the average of each variable for each activity and each subject
 activity_mean <- activity_data %>%
