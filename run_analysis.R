@@ -12,12 +12,9 @@ library(plyr)
 library(stringr)
 
 ## download files and read in data
-<<<<<<< HEAD
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileURL, "HAR Data.zip", method="curl")
 unzip("HAR Data.zip")
-=======
->>>>>>> 6c80b5085dc450877cdeda7a61a5deef75234b41
 
 ## load the features then rename columns to meaningful labels
 features_data <- read.table("UCI HAR Dataset\\features.txt", header=F, col.names=c("id","feature"))
